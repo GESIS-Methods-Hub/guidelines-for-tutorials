@@ -23,9 +23,9 @@ There are some suggested headings. [Template](template.qmd) for those headings i
 
 [image source](https://github.com/GESIS-Methods-Hub/andrew/blob/main/img/andrew-content.png)
 
-All submitted tutorials will be converted to both `qmd` and `ipynb` by [andrew](https://github.com/GESIS-Methods-Hub/andrew). It is (more) important to make sure that the `qmd` version can be rendered correctly as it is used for rendering the HTML version on MH.
+All submitted tutorials will be converted to both `qmd` and `ipynb` by [magdalena](https://git.gesis.org/methods-hub/magdalena) [^1]. It is (more) important to make sure that the `qmd` version can be rendered correctly as it is used for rendering the HTML version on MH.
 
-The `ipynb` version is available for download. Also, it will be used mostly for launching the tutorial on Binder (see [below](#binder- compatibility)).
+The `ipynb` version is available for download. Also, it will be used mostly for launching the tutorial on Binder (see below).
 
 ## Use the template
 
@@ -37,7 +37,7 @@ quarto render template.qmd
 
 ## Conversion
 
-Content aggregator [`andrew`](https://github.com/GESIS-Methods-Hub/andrew) uses `quarto` to do the conversion (see the code [here](https://github.com/GESIS-Methods-Hub/andrew/tree/main/inst/docker-scripts)). You can try the same conversion yourself.
+Content aggregator `magdalena` uses `quarto` to do the conversion. You can try the same conversion yourself.
 
 `qmd` to `ipynb`
 
@@ -77,4 +77,6 @@ You can check whether your tutorial is binder compatible by pushing your tutoria
 
 This is [an example](https://github.com/chainsawriot/methodshub-weat).
 
+---
 
+[^1]: Access to the code of magdalena is not public.
