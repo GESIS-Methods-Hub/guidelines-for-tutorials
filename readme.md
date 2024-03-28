@@ -5,7 +5,7 @@
 With code execution
 
 | Format | File extension | Notes |
-| --- | --- |
+| --- | --- | --- |
 | [Quarto](https://quarto.org/) | `.qmd` | |
 | [Jupyter Notebook Format](https://nbformat.readthedocs.io/en/latest/index.html) | `.ipynb` | Limited to a single programming language. |
 | [R Markdown](https://rmarkdown.rstudio.com/) | `.rmd` | If possible, should be ported to Quarto. |
