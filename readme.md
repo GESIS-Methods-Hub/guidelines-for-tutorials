@@ -1,8 +1,8 @@
 # MH Tutorial Preparation Guide (CSS)
 
-# Accepted formats 
+## Accepted formats 
 
-With code execution
+### With code execution
 
 | Format | File extension | Notes |
 | --- | --- | --- |
