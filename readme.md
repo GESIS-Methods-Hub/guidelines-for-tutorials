@@ -8,10 +8,15 @@ With code execution
 * `ipynb` Jupyter Notebook (Preferred)
 * `rmd` RMarkdown
 
-Without code execution (e.g. web tools)
+### Without code execution
 
-* Markdown
-* Word
+For example, web tools.
+
+| Format | File extension | Notes |
+| --- | --- | --- |
+| [Quarto](https://quarto.org/) | `.qmd` | Preferable format as it supports [citations](https://quarto.org/docs/authoring/footnotes-and-citations.html) and [cross references](https://quarto.org/docs/authoring/cross-references.html). |
+| [(Pandoc) Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) | `.md` | |
+| Microsoft Word | `.docx` | Not fully supported. |
 
 # Headings
 
