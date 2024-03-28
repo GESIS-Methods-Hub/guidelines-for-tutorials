@@ -20,19 +20,21 @@ For example, web tools.
 | [(Pandoc) Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) | `.md` | |
 | Microsoft Word | `.docx` | Not fully supported. |
 
-# Headings
+## Headings
 
-There are some suggested headings. [Template](template.qmd) for those headings is available for `quarto`.
+There are some suggested headings. See [`template.qmd`](template.qmd) for the suggested headings.
 
-# Reproducibility
+## Reproducibility
 
 ![](img/andrew-content.png)
 
 [image source](https://github.com/GESIS-Methods-Hub/andrew/blob/main/img/andrew-content.png)
 
-All submitted tutorials will be converted to both `qmd` and `ipynb` by [magdalena](https://git.gesis.org/methods-hub/magdalena) [^1]. It is (more) important to make sure that the `qmd` version can be rendered correctly as it is used for rendering the HTML version on MH.
+All submitted tutorials will be converted to both `.html` and `.ipynb` by [magdalena](https://git.gesis.org/methods-hub/magdalena) [^1] using [Quarto](https://quarto.org/).
 
-The `ipynb` version is available for download. Also, it will be used mostly for launching the tutorial on Binder (see below).
+The `.html` version is used as the landing page on Methods Hub.
+
+The `.ipynb` version is available for download from Methods Hub.
 
 ## Use the template
 
@@ -44,7 +46,7 @@ quarto render template.qmd
 
 ## Conversion
 
-Content aggregator `magdalena` uses `quarto` to do the conversion. You can try the same conversion yourself.
+Content converstion `magdalena` uses `quarto` to do the conversion. You can try the same conversion yourself.
 
 `qmd` to `ipynb`
 
