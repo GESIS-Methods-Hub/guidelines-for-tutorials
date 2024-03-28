@@ -1,12 +1,14 @@
 # MH Tutorial Preparation Guide (CSS)
 
-# Accepted formats 
+## Accepted formats 
 
-With code execution
+### With code execution
 
-* `qmd` [Quarto](https://quarto.org/) (Highly recommended)
-* `ipynb` Jupyter Notebook (Preferred)
-* `rmd` RMarkdown
+| Format | File extension | Notes |
+| --- | --- | --- |
+| [Quarto](https://quarto.org/) | `.qmd` | |
+| [Jupyter Notebook Format](https://nbformat.readthedocs.io/en/latest/index.html) | `.ipynb` | Limited to a single programming language. |
+| [R Markdown](https://rmarkdown.rstudio.com/) | `.rmd` | If possible, should be ported to Quarto. |
 
 Without code execution (e.g. web tools)
 
