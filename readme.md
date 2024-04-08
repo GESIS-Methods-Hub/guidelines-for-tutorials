@@ -30,7 +30,7 @@ There are some suggested headings. See [`template.qmd`](template.qmd) for the su
 
 [image source](https://github.com/GESIS-Methods-Hub/andrew/blob/main/img/andrew-content.png)
 
-All submitted tutorials will be converted to both `.html` and `.ipynb` by [magdalena](https://git.gesis.org/methods-hub/magdalena) [^1] using [Quarto](https://quarto.org/).
+All submitted tutorials will be converted to both `.html` and `.ipynb` by [magdalena](https://github.com/gesiscss/magdalena) using [Quarto](https://quarto.org/).
 
 The `.html` version is used as the landing page on Methods Hub.
 
@@ -91,7 +91,3 @@ You may still need to produce the [configuration files](https://mybinder.readthe
 You can check whether your tutorial is binder compatible by pushing your tutorial to GitHub (other options are also available) and launch it with [this form](https://mybinder.org/).
 
 This is [an example](https://github.com/chainsawriot/methodshub-weat).
-
----
-
-[^1]: Access to the code of magdalena is not public.
