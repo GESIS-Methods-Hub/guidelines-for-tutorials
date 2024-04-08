@@ -80,7 +80,13 @@ Suppose you have put your tutorial and its associated files in that directory.
 quarto use binder
 ```
 
-It will generate several files, e.g. `runtime.txt`, `postbuild`, `apt.txt`. You may still need to produce the [configuration files](https://mybinder.readthedocs.io/en/latest/using/config_files.html). For Python, you can use `requirements.txt` or `environment.yml` (conda). For R, you need to provide a file called `install.R` with `install.packages()` calls. In most of the cases, you do not need to pin the version (e.g. with tools such as `renv`) because [3PM](https://posit.co/products/cloud/public-package-manager/) is used. It will install the latest version of R packages according to the snapshot date recorded in `runtime.txt`.
+It will generate several files, e.g. 
+
+* `runtime.txt` ([example](https://github.com/chainsawriot/methodshub-weat/blob/v0.0/runtime.txt), it configures the run time environment, e.g. `r-4.3.3-2024-02-29`)
+* `apt.txt` ([example](https://github.com/chainsawriot/methodshub-weat/blob/v0.0/apt.txt), it configures the system requirements)
+* `postbuild` ([example](https://github.com/chainsawriot/methodshub-weat/blob/v0.0/postBuild), it configures the additional tools such as quarto)
+
+You may still need to produce the [configuration files](https://mybinder.readthedocs.io/en/latest/using/config_files.html). For Python, you can use `requirements.txt` or `environment.yml` (conda). For R, you need to provide a file called `install.R` with `install.packages()` calls ([example](https://github.com/chainsawriot/methodshub-weat/blob/v0.0/install.R)). In most of the cases, you do not need to pin the version (e.g. with tools such as `renv`) because [3PM](https://posit.co/products/cloud/public-package-manager/) is used. It will install the latest version of R packages according to the snapshot date recorded in `runtime.txt`.
 
 You can check whether your tutorial is binder compatible by pushing your tutorial to GitHub (other options are also available) and launch it with [this form](https://mybinder.org/).
 
