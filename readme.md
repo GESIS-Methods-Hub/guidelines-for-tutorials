@@ -22,7 +22,7 @@ For example, web tools.
 
 ## Headings
 
-There are some suggested headings. See [`template.qmd`](template.qmd) for the suggested headings.
+There are some suggested headings. See [`template.qmd`](template.qmd) and [`template.ipynb`](template.ipynb) for the suggested headings.
 
 ## Reproducibility
 
@@ -60,7 +60,7 @@ quarto convert input.qmd --output output.ipynb
 quarto convert input.ipynb --output output.qmd
 ```
 
-See [`conv.sh`](conv.sh) on how to convert [an `ipynb`-based tutorial](https://github.com/gesiscss/css_methods_python/tree/main/b_data_collection_methods) to quarto and back. See also the note about code execution below.
+See [`conv.sh`](conv.sh) on how to convert [an existing `ipynb`-based tutorial](https://github.com/gesiscss/css_methods_python/tree/main/b_data_collection_methods) to quarto and back. See also the note about code execution below.
 
 ## Binder compatibility
 
@@ -129,3 +129,12 @@ mean(mtcars$mpg)
 plot(mtcars$mpg, mtcars$wt)
 ```
 ````
+
+## Missing features of Jupyter notebook
+
+Jupyter notebooks are rendered into HTML with quarto using the Jupyter kernel. Comparing to native quarto documents, the following features are not supported.
+
+* Built-in YAML Metadata
+* BibTex citation and bibliography (you have to do citation manually, this method does not work for [HTML rendering](https://nbviewer.org/github/jupyter/nbconvert-examples/blob/master/citations/Tutorial.ipynb))
+* Cross referencing
+
