@@ -1,0 +1,26 @@
+
+```{r}
+mean(mtcars$mpg)
+plot(mtcars$mpg, mtcars$wt)
+```
+
+```{r}
+mean(mtcars$mpg)
+plot(mtcars$mpg, mtcars$wt)
+```
+
+```{r}
+print(mean(mtcars$mpg))
+plot(mtcars$mpg, mtcars$wt)
+```
+
+```{r}
+#| echo: true
+mean(mtcars$mpg)
+plot(mtcars$mpg, mtcars$wt)
+```
+
+```{r}
+#| echo: true
+plot(mtcars$mpg, mtcars$wt)
+```
