@@ -44,6 +44,21 @@ If you use the `quarto` template above, you can get both HTML (for preview) and 
 quarto render template.qmd
 ```
 
+## Use the Jupyter notebook template
+
+Jupyter notebooks are rendered into HTML with quarto using the Jupyter kernel. Comparing to native quarto documents, the following features are not supported.
+
+* BibTex citation and bibliography (you have to do citation manually, this method does not work for [HTML rendering](https://nbviewer.org/github/jupyter/nbconvert-examples/blob/master/citations/Tutorial.ipynb))
+* Cross referencing
+
+Please also note how to handle the [YAML Front Matter](https://quarto.org/docs/tools/jupyter-lab.html#yaml-front-matter) for notebook. An example is provided in [`template.ipynb`](template.ipynb).
+
+It can be rendered with quarto like so:
+
+```sh
+quarto render template.ipynb
+```
+
 ## Conversion
 
 Content converstion `magdalena` uses `quarto` to do the conversion. You can try the same conversion yourself.
@@ -129,12 +144,3 @@ mean(mtcars$mpg)
 plot(mtcars$mpg, mtcars$wt)
 ```
 ````
-
-## Missing features of Jupyter notebook
-
-Jupyter notebooks are rendered into HTML with quarto using the Jupyter kernel. Comparing to native quarto documents, the following features are not supported.
-
-* Built-in YAML Metadata
-* BibTex citation and bibliography (you have to do citation manually, this method does not work for [HTML rendering](https://nbviewer.org/github/jupyter/nbconvert-examples/blob/master/citations/Tutorial.ipynb))
-* Cross referencing
-
