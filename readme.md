@@ -97,12 +97,10 @@ This is [an example](https://github.com/chainsawriot/methodshub-weat).
 There is one subtle, but important, difference between the code execution between `knitr` (the default renderer for R code in `quarto`) and jupyter. For example, this R code block (see the provided file `code_exec.qmd`)
 
 ````
-
 ```{r}
 mean(mtcars$mpg)
 plot(mtcars$mpg, mtcars$wt)
 ```
-
 ````
 
 When rendering this into notebook by quarto using
@@ -122,15 +120,12 @@ quarto convert code_exec.qmd -o code_exec.ipynb
 Or, to split the code block into one line per block. And for the plot code, you must add the execution option. Only in this case, `quarto render` will not eat the visualization code.
 
 ````
-
 ```{r}
 mean(mtcars$mpg)
 ```
-
 
 ```{r}
 #| echo: true
 plot(mtcars$mpg, mtcars$wt)
 ```
-
 ````
