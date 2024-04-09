@@ -1,4 +1,4 @@
-# MH Tutorial Preparation Guide (CSS)
+# MH Tutorial Preparation Guide
 
 ## Accepted formats 
 
@@ -60,7 +60,7 @@ quarto convert input.qmd --output output.ipynb
 quarto convert input.ipynb --output output.qmd
 ```
 
-See [`conv.sh`](conv.sh) on how to convert [an `ipynb`-based tutorial](https://github.com/gesiscss/css_methods_python/tree/main/b_data_collection_methods) to quarto and back.
+See [`conv.sh`](conv.sh) on how to convert [an `ipynb`-based tutorial](https://github.com/gesiscss/css_methods_python/tree/main/b_data_collection_methods) to quarto and back. See also the note about code execution below.
 
 ## Binder compatibility
 
@@ -91,3 +91,41 @@ You may still need to produce the [configuration files](https://mybinder.readthe
 You can check whether your tutorial is binder compatible by pushing your tutorial to GitHub (other options are also available) and launch it with [this form](https://mybinder.org/).
 
 This is [an example](https://github.com/chainsawriot/methodshub-weat).
+
+## Caution: Code execution by knitr and jupyter
+
+There is one subtle, but important, difference between the code execution between `knitr` (the default renderer for R code in `quarto`) and jupyter. For example, this R code block (see the provided file `code_exec.qmd`)
+
+````
+```{r}
+mean(mtcars$mpg)
+plot(mtcars$mpg, mtcars$wt)
+```
+````
+
+When rendering this into notebook by quarto using
+
+```sh
+quarto render code_exec.qmd --to=ipynb
+```
+
+All code blocks will be rendered but also will get modified with the plotting line removed. It's not ideal. So, there two ways to fix this:
+
+Convert it is by using `quarto convert` instead to generate an empty ipynb.
+
+```sh
+quarto convert code_exec.qmd -o code_exec.ipynb
+```
+
+Or, to split the code block into one line per block. And for the plot code, you must add the execution option. Only in this case, `quarto render` will not eat the visualization code.
+
+````
+```{r}
+mean(mtcars$mpg)
+```
+
+```{r}
+#| echo: true
+plot(mtcars$mpg, mtcars$wt)
+```
+````
