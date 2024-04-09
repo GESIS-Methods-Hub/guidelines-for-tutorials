@@ -56,7 +56,7 @@ Please also note how to handle the [YAML Front Matter](https://quarto.org/docs/t
 It can be rendered with quarto like so:
 
 ```sh
-quarto render template.ipynb
+quarto render notebook.ipynb --execute
 ```
 
 ## Conversion
