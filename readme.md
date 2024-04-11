@@ -22,7 +22,7 @@ For example, web tools.
 
 ## Headings
 
-There are some suggested headings. See [`template.qmd`](template.qmd) for the suggested headings.
+There are some suggested headings. See [`template.qmd`](template.qmd) and [`template.ipynb`](template.ipynb) for the suggested headings.
 
 ## Reproducibility
 
@@ -44,6 +44,21 @@ If you use the `quarto` template above, you can get both HTML (for preview) and 
 quarto render template.qmd
 ```
 
+## Use the Jupyter notebook template
+
+Jupyter notebooks are rendered into HTML with quarto using the Jupyter kernel. Comparing to native quarto documents, the following features are not supported.
+
+* BibTex citation and bibliography (you have to do citation manually, this method does not work for [HTML rendering](https://nbviewer.org/github/jupyter/nbconvert-examples/blob/master/citations/Tutorial.ipynb))
+* Cross referencing
+
+Please also note how to handle the [YAML Front Matter](https://quarto.org/docs/tools/jupyter-lab.html#yaml-front-matter) for notebook. An example is provided in [`template.ipynb`](template.ipynb).
+
+It can be rendered with quarto like so:
+
+```sh
+quarto render notebook.ipynb --execute
+```
+
 ## Conversion
 
 Content converstion `magdalena` uses `quarto` to do the conversion. You can try the same conversion yourself.
@@ -60,7 +75,7 @@ quarto convert input.qmd --output output.ipynb
 quarto convert input.ipynb --output output.qmd
 ```
 
-See [`conv.sh`](conv.sh) on how to convert [an `ipynb`-based tutorial](https://github.com/gesiscss/css_methods_python/tree/main/b_data_collection_methods) to quarto and back. See also the note about code execution below.
+See [`conv.sh`](conv.sh) on how to convert [an existing `ipynb`-based tutorial](https://github.com/gesiscss/css_methods_python/tree/main/b_data_collection_methods) to quarto and back. See also the note about code execution below.
 
 ## Binder compatibility
 
