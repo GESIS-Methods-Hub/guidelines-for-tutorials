@@ -38,7 +38,7 @@ By the end of this tutorial, you will be able to
 
 ## Target audience
 
-e.g. This tutorial is aimed at beginners with some knowledge in R.
+e.g. This tutorial is aimed at beginners with some knowledge in R. Optionally, prerequisites, e.g. Prior knowledge of R programming is required for this tutorial.
 
 ## Setting up the computational environment
 
