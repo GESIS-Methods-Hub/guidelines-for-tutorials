@@ -26,15 +26,7 @@ There are some suggested headings. See [`template.qmd`](template.qmd) and [`temp
 
 ## Reproducibility
 
-![](img/andrew-content.png)
-
-[image source](https://github.com/GESIS-Methods-Hub/andrew/blob/main/img/andrew-content.png)
-
-All submitted tutorials will be converted to both `.html` and `.ipynb` by [magdalena](https://github.com/gesiscss/magdalena) using [Quarto](https://quarto.org/).
-
-The `.html` version is used as the landing page on Methods Hub.
-
-The `.ipynb` version is available for download from Methods Hub.
+All submitted tutorials will be converted to HTML by Methods Hub using [Quarto](https://quarto.org/). The HTML version is included in the tutorial's landing page on Methods Hub.
 
 ## Use the template
 
