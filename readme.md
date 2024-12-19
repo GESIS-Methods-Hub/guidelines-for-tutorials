@@ -1,4 +1,4 @@
-# MH Tutorial Preparation Guide
+# Methods Hub Guidelines for Tutorials
 
 ## Accepted formats 
 
