@@ -53,7 +53,7 @@ quarto render notebook.ipynb --execute
 
 ## Conversion
 
-Content converstion `magdalena` uses `quarto` to do the conversion. You can try the same conversion yourself.
+Methods Hub uses `quarto` to do the conversion. You can try the same conversion yourself.
 
 `qmd` to `ipynb`
 
