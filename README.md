@@ -1,4 +1,8 @@
-# Methods Hub Guidelines for Tutorials
+# Methods Hub's Guidelines for Tutorials
+
+Here you will find the guidelines used by Methods Hub for tutorials.
+If you are preparing a method,
+check the [guidelines used by Methods Hub for methods](https://github.com/GESIS-Methods-Hub/guidelines-for-methods).
 
 ## Accepted formats 
 
@@ -19,6 +23,19 @@ For example, web tools.
 | [Quarto](https://quarto.org/) | `.qmd` | Preferable format as it supports [citations](https://quarto.org/docs/authoring/footnotes-and-citations.html) and [cross references](https://quarto.org/docs/authoring/cross-references.html). |
 | [(Pandoc) Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) | `.md` | |
 | Microsoft Word | `.docx` | Not fully supported. |
+
+## Required Files
+
+The Git repository with the method **must** have the following files
+
+- [`README.*`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
+- [`LICENSE.*`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
+- [`CITATION.cff`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files)
+
+Additionally, the Git repository **must** also have the [necessary files for the interactive environment](https://repo2docker.readthedocs.io/en/latest/configuration/index.html). For example,
+
+- `binder/postBuild`
+- `binder/environment.yml`
 
 ## Headings
 
