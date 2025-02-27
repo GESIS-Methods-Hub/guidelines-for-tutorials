@@ -22,7 +22,6 @@ For example, web tools.
 | --- | --- | --- |
 | [Quarto](https://quarto.org/) | `.qmd` | Preferable format as it supports [citations](https://quarto.org/docs/authoring/footnotes-and-citations.html) and [cross references](https://quarto.org/docs/authoring/cross-references.html). |
 | [(Pandoc) Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) | `.md` | |
-| Microsoft Word | `.docx` | Not fully supported. |
 
 ## Required Files
 
