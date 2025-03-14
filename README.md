@@ -62,7 +62,8 @@ It is strongly recommended to pin the version of the dependencies.
 
 ### R
 
-Create `binder/runtime.txt` and `binder/install.R`.
+`install.packages()` should **not** be called from the `.qmd` or `.rmd`!
+Instead, create `binder/runtime.txt` and `binder/install.R`.
 
 ```bash
 echo "r-$(R --version | head -n 1 | grep -oP '\d+\.\d+\.\d+')-$(printf '%(%Y-%m-%d)T\n' -1)" > binder/runtime.txt
