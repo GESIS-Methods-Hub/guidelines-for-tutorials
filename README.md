@@ -10,7 +10,7 @@ check the [guidelines used by Methods Hub for methods](https://github.com/GESIS-
 
 | Format | File extension | Notes |
 | --- | --- | --- |
-| [Quarto](https://quarto.org/) | `.qmd` | |
+| [Quarto] | `.qmd` | |
 | [Jupyter Notebook Format](https://nbformat.readthedocs.io/en/latest/index.html) | `.ipynb` | Limited to a single programming language. |
 | [R Markdown](https://rmarkdown.rstudio.com/) | `.rmd` | If possible, should be ported to Quarto. |
 
@@ -20,7 +20,7 @@ For example, web tools.
 
 | Format | File extension | Notes |
 | --- | --- | --- |
-| [Quarto](https://quarto.org/) | `.qmd` | Preferable format as it supports [citations](https://quarto.org/docs/authoring/footnotes-and-citations.html) and [cross references](https://quarto.org/docs/authoring/cross-references.html). |
+| [Quarto] | `.qmd` | Preferable format as it supports [citations](https://quarto.org/docs/authoring/footnotes-and-citations.html) and [cross references](https://quarto.org/docs/authoring/cross-references.html). |
 | [(Pandoc) Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) | `.md` | |
 
 ## Required Files
@@ -42,7 +42,7 @@ There are some suggested headings. See [`template.qmd`](template.qmd) and [`temp
 
 ## Reproducibility
 
-All submitted tutorials will be converted to HTML by Methods Hub using [Quarto](https://quarto.org/). The HTML version is included in the tutorial's landing page on Methods Hub.
+All submitted tutorials will be converted to HTML by Methods Hub using [Quarto]. The HTML version is included in the tutorial's landing page on Methods Hub.
 
 ## Use the template
 
@@ -154,3 +154,5 @@ plot(mtcars$mpg, mtcars$wt)
 ````
 
 [^1]: That environment will be used for rendering the tutorial and for the interactive execution.
+
+[Quarto]: https://quarto.org/
