@@ -46,6 +46,8 @@ conda env -n environment-name export > binder/environment.yml
 
 The `binder/environment.txt` should look like [`binder-examples/language-agnostic/environment.yml`](binder-examples/language-agnostic/environment.yml).
 
+It is strongly recommended to pin the version of the dependencies.
+
 ### Python
 
 Create `binder/requirements.txt` using `pip`.
@@ -55,6 +57,8 @@ python3 -m pip freeze > binder/requirements.txt
 ```
 
 The `binder/requirements.txt` should look like [`binder-examples/language-agnostic/requirements.yml`](binder-examples/language-agnostic/requirements.yml).
+
+It is strongly recommended to pin the version of the dependencies.
 
 ### R
 
@@ -67,6 +71,8 @@ echo "r-$(R --version | head -n 1 | grep -oP '\d+\.\d+\.\d+')-$(printf '%(%Y-%m-
 And add `install.packages()` calls to `binder/install.R`.
 
 The `binder/install.R` should look like [`binder-examples/language-agnostic/install.R`](binder-examples/language-agnostic/install.R).
+
+There are no need to pin the version (e.g. with tools such as `renv`) because [3PM](https://posit.co/products/cloud/public-package-manager/) is used. It will install the latest version of R packages according to the snapshot date recorded in `runtime.txt`.
 
 ## Headings
 
@@ -141,9 +147,9 @@ It will generate several files, e.g.
 * `apt.txt` ([example](https://github.com/chainsawriot/methodshub-weat/blob/v0.0/apt.txt), it configures the system requirements)
 * `postbuild` ([example](https://github.com/chainsawriot/methodshub-weat/blob/v0.0/postBuild), it configures the additional tools such as quarto)
 
-You may still need to produce the [configuration files](https://mybinder.readthedocs.io/en/latest/using/config_files.html). For Python, you can use `requirements.txt` or `environment.yml` (conda). For R, you need to provide a file called `install.R` with `install.packages()` calls ([example](https://github.com/chainsawriot/methodshub-weat/blob/v0.0/install.R)). In most of the cases, you do not need to pin the version (e.g. with tools such as `renv`) because [3PM](https://posit.co/products/cloud/public-package-manager/) is used. It will install the latest version of R packages according to the snapshot date recorded in `runtime.txt`.
+You may still need to produce the [configuration files](https://mybinder.readthedocs.io/en/latest/using/config_files.html) as described in the ["Required Files" section](#required-files).
 
-You can check whether your tutorial is binder compatible by pushing your tutorial to GitHub (other options are also available) and launch it with [this form](https://mybinder.org/).
+You can check whether your tutorial is binder compatible by pushing your tutorial to GitHub (other options are also available) and launch it with [using the mybinder.org form](https://mybinder.org/).
 
 This is [an example](https://github.com/chainsawriot/methodshub-weat).
 
