@@ -36,6 +36,38 @@ Additionally, the Git repository **must** also have the [necessary files for set
 - `binder/postBuild`
 - `binder/environment.yml`
 
+### Language agnostic
+
+Create `binder/environment.yml` using `conda`.
+
+```bash
+conda env -n environment-name export > binder/environment.yml
+```
+
+The `binder/environment.txt` should look like [`binder-examples/language-agnostic/environment.yml`](binder-examples/language-agnostic/environment.yml).
+
+### Python
+
+Create `binder/requirements.txt` using `pip`.
+
+```bash
+python3 -m pip freeze > binder/requirements.txt
+```
+
+The `binder/requirements.txt` should look like [`binder-examples/language-agnostic/requirements.yml`](binder-examples/language-agnostic/requirements.yml).
+
+### R
+
+Create `binder/runtime.txt` and `binder/install.R`.
+
+```bash
+echo "r-$(R --version | head -n 1 | grep -oP '\d+\.\d+\.\d+')-$(printf '%(%Y-%m-%d)T\n' -1)" > binder/runtime.txt
+```
+
+And add `install.packages()` calls to `binder/install.R`.
+
+The `binder/install.R` should look like [`binder-examples/language-agnostic/install.R`](binder-examples/language-agnostic/install.R).
+
 ## Headings
 
 There are some suggested headings. See [`template.qmd`](template.qmd) and [`template.ipynb`](template.ipynb) for the suggested headings.
