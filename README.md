@@ -25,7 +25,7 @@ For example, web tools.
 
 ## Required Files
 
-The Git repository with the method **must** have the following files
+The Git repository with the tutorial **must** have the following files
 
 - [`README.*`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
 - [`LICENSE.*`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
