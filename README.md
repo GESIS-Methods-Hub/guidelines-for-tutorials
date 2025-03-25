@@ -62,7 +62,8 @@ It is strongly recommended to pin the version of the dependencies.
 
 ### R
 
-`install.packages()` should **not** be called from the `.qmd` or `.rmd`!
+`install.packages()` or similar commands for installing R packages (e.g. `pak::pkg_install()`, `devtools::install_github()`) should **not** be called from `.qmd` or `.rmd`!
+
 Instead, create `binder/runtime.txt` and `binder/install.R`.
 
 ```bash
@@ -73,7 +74,9 @@ And add `install.packages()` calls to `binder/install.R`.
 
 The `binder/install.R` should look like [`binder-examples/language-agnostic/install.R`](binder-examples/language-agnostic/install.R).
 
-There are no need to pin the version (e.g. with tools such as `renv`) because [3PM](https://posit.co/products/cloud/public-package-manager/) is used. It will install the latest version of R packages according to the snapshot date recorded in `runtime.txt`.
+There are no need to pin the version (e.g. with tools such as `renv`) because [P3M](https://posit.co/products/cloud/public-package-manager/) is used. It will install the latest version of R packages according to the snapshot date recorded in `runtime.txt`.
+
+If there is a need to illustrate the installation process using `install.packages()` or similar commands for installing R packages, set the code block to `eval: false` as illustrated in [`template.qmd`](template.qmd).
 
 ## Headings
 
