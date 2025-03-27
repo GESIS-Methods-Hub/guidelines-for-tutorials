@@ -42,7 +42,18 @@ e.g. This tutorial is aimed at beginners with some knowledge in R. Optionally, p
 
 ## Setting up the computational environment
 
-e.g. The following R packages are required:
+Install the R packages.
+
+```{r}
+#| label: install-packages
+#| eval: false
+install.packages("quanteda")
+install.packages("lsa")
+install.packages("rsparse")
+install.packages("sweater")
+```
+
+And load the R packages.
 
 ```{r}
 #| message: false
