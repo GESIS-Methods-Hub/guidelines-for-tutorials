@@ -44,7 +44,7 @@ Create `binder/environment.yml` using `conda`.
 conda env -n environment-name export > binder/environment.yml
 ```
 
-The `binder/environment.txt` should look like [`binder-examples/language-agnostic/environment.yml`](binder-examples/language-agnostic/environment.yml).
+The `binder/environment.yml` should look like [`binder-examples/language-agnostic/environment.yml`](binder-examples/language-agnostic/environment.yml).
 
 It is strongly recommended to pin the version of the dependencies.
 
