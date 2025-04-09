@@ -1,8 +1,10 @@
 # Methods Hub's Guidelines for Tutorials
 
-Here you will find the guidelines used by Methods Hub for tutorials.
-If you are preparing a method,
-check the [guidelines used by Methods Hub for methods](https://github.com/GESIS-Methods-Hub/guidelines-for-methods).
+A tutorial is an instructional resource that may be used as a part of a self-guided learning process. Tutorials on the Methods Hub should focus on very concrete tasks and methods and offer code that helps researchers to solve the task via applications of methods that are featured on the Methods Hub. A tutorial can thus feature more than just one method. Tutorials will be prefaced with what prior knowledge is expected from the user such that the user can judge themselves if they have the required skills to follow the tutorial.
+
+We also aim to provide a set of tutorials that teach researchers how to set up reproducible computational workflows and related fundamentals of data science
+
+Here you will find the guidelines used by Methods Hub for tutorials. If you are preparing a method, check the [guidelines used by Methods Hub for methods](https://github.com/GESIS-Methods-Hub/guidelines-for-methods).
 
 ## Accepted formats 
 
