@@ -4,7 +4,7 @@ Here you will find the guidelines used by Methods Hub for tutorials. If you are 
 
 A tutorial is an instructional resource that may be used as a part of a self-guided learning process. Tutorials on the Methods Hub should focus on very concrete tasks and offer code that helps researchers to solve the task. This could be via applications of methods that are featured on the Methods Hub, but could also refer to methods publised elsewhere. A tutorial can feature more than one method. Tutorials will be prefaced with what prior knowledge is expected from the user such that the user can judge themselves if they have the required skills to follow the tutorial.
 
-Here you can find an overview of tasks, for which we welcome tutorials <https://methodshub.gesis.org/about/how-to-submit/taxonomy>.
+Here you can find an overview of tasks, for which we welcome tutorials: <https://methodshub.gesis.org/about/how-to-submit/taxonomy>.
 
 ## Accepted formats 
 
