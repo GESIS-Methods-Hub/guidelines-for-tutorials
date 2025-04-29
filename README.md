@@ -70,7 +70,7 @@ There are no need to pin the version (e.g. with tools such as `renv`) because [P
 
 If there is a need to illustrate the installation process using `install.packages()` or similar commands for installing R packages, set the code block to `eval: false` as illustrated in [`template.qmd`](template.qmd).
 
-## Headings
+## Structure of tutorial source file
 
 There are some suggested headings. See [`template.qmd`] and [`template.ipynb`] for the suggested headings.
 
