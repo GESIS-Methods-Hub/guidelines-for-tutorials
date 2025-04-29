@@ -4,25 +4,15 @@ Here you will find the guidelines used by Methods Hub for tutorials. If you are 
 
 A tutorial is an instructional resource that may be used as a part of a self-guided learning process. Tutorials on the Methods Hub should focus on very concrete tasks and offer code that helps researchers to solve the task. This could be via applications of methods that are featured on the Methods Hub, but could also refer to methods publised elsewhere. A tutorial can feature more than one method. Tutorials will be prefaced with what prior knowledge is expected from the user such that the user can judge themselves if they have the required skills to follow the tutorial.
 
-At [Methods HUb's Taxonomy](https://methodshub.gesis.org/about/how-to-submit/taxonomy) you find an overview of tasks for which Methods Hub welcomes tutorials.
+At [Methods Hub's Taxonomy](https://methodshub.gesis.org/about/how-to-submit/taxonomy) you find an overview of tasks for which Methods Hub welcomes tutorials.
 
 ## Accepted formats 
 
-### With code execution
-
 | Format | File extension | Notes |
 | --- | --- | --- |
-| [Quarto] | `.qmd` | |
+| [Quarto](https://quarto.org/) | `.qmd` | |
 | [Jupyter Notebook Format](https://nbformat.readthedocs.io/en/latest/index.html) | `.ipynb` | Limited to a single programming language. |
 | [R Markdown](https://rmarkdown.rstudio.com/) | `.rmd` | If possible, should be ported to Quarto. |
-
-### Without code execution
-
-For example, web tools.
-
-| Format | File extension | Notes |
-| --- | --- | --- |
-| [Quarto] | `.qmd` | Preferable format as it supports [citations](https://quarto.org/docs/authoring/footnotes-and-citations.html) and [cross references](https://quarto.org/docs/authoring/cross-references.html). |
 | [(Pandoc) Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) | `.md` | |
 
 ## Required Files
