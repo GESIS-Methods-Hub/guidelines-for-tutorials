@@ -23,10 +23,11 @@ The Git repository with the tutorial **must** have the following files
 - [`LICENSE.*`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 - [`CITATION.cff`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files)
 
-Additionally, the Git repository **must** also have the [necessary files for setting up a binder environment](https://mybinder.readthedocs.io/en/latest/using/config_files.html)[^1]. For example,
+Additionally, the Git repository **must** also have the [necessary files for setting up a binder environment](https://mybinder.readthedocs.io/en/latest/using/config_files.html)[^1].
 
-- `binder/postBuild`
-- `binder/environment.yml`
+These binder configuration files can be located at the root level or in a directory named `.binder` or `binder`. In the following sections, we will assume these files to be located in `binder`.
+
+Among the binder configuration files, there **must** be a `binder/postBuild` file that facilitates Quarto installation. The `postBuild` can be downloaded from https://methodshub.gesis.org/snippet/postBuild/.
 
 ### Language agnostic
 
@@ -118,36 +119,6 @@ quarto convert input.ipynb --output output.qmd
 ```
 
 See [`conv.sh`](conv.sh) on how to convert [an existing `ipynb`-based tutorial](https://github.com/gesiscss/css_methods_python/tree/main/b_data_collection_methods) to quarto and back. See also the note about code execution below.
-
-## Binder compatibility
-
-`quarto` can make your tutorial [Binder](https://mybinder.org) compatible. But you should have `_quarto.yml` in the same directory, i.e. it is a [Quarto project](https://quarto.org/docs/projects/quarto-projects.html).
-
-You can initialize a project by:
-
-```sh
-## replace `projectname` with something else
-quarto create projectname
-cd projectname
-```
-
-Suppose you have put your tutorial and its associated files in that directory.
-
-```sh
-quarto use binder
-```
-
-It will generate several files, e.g. 
-
-* `runtime.txt` ([example](https://github.com/chainsawriot/methodshub-weat/blob/v0.0/runtime.txt), it configures the run time environment, e.g. `r-4.3.3-2024-02-29`)
-* `apt.txt` ([example](https://github.com/chainsawriot/methodshub-weat/blob/v0.0/apt.txt), it configures the system requirements)
-* `postbuild` ([example](https://github.com/chainsawriot/methodshub-weat/blob/v0.0/postBuild), it configures the additional tools such as [Quarto])
-
-You may still need to produce the [configuration files](https://mybinder.readthedocs.io/en/latest/using/config_files.html) as described in the ["Required Files" section](#required-files).
-
-You can check whether your tutorial is binder compatible by pushing your tutorial to GitHub (other options are also available) and launch it with [using the mybinder.org form](https://mybinder.org/).
-
-This is [an example](https://github.com/chainsawriot/methodshub-weat).
 
 ## Caution: Code execution by knitr and jupyter
 
