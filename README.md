@@ -34,7 +34,7 @@ Among the binder configuration files, there **must** be a `binder/postBuild` fil
 Create `binder/environment.yml` using `conda`.
 
 ```bash
-conda env -n environment-name export > binder/environment.yml
+conda env export -n environment-name > binder/environment.yml
 ```
 
 The `binder/environment.yml` should look like [`binder-examples/language-agnostic/environment.yml`](binder-examples/language-agnostic/environment.yml).
