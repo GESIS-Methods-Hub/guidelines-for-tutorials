@@ -6,6 +6,10 @@ A tutorial is an instructional resource that may be used as a part of a self-gui
 
 At [Methods Hub's Taxonomy](https://methodshub.gesis.org/about/how-to-submit/taxonomy) you find an overview of tasks for which Methods Hub welcomes tutorials.
 
+<!--
+The checklist will be here
+--->
+
 ## Accepted formats 
 
 | Format | File extension | Notes |
@@ -23,23 +27,12 @@ The Git repository with the tutorial **must** have the following files
 - [`LICENSE.*`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 - [`CITATION.cff`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files)
 
-Additionally, the Git repository **must** also have the [necessary files for setting up a binder environment](https://mybinder.readthedocs.io/en/latest/using/config_files.html)[^1].
+Additionally, the Git repository **must** also have the [necessary files for setting up a binder environment](https://mybinder.readthedocs.io/en/latest/using/config_files.html)[^1]. These binder configuration files can be located at the root level or in a directory named `.binder` or `binder`. In the following sections, we will assume these files to be located in `binder`.
 
-These binder configuration files can be located at the root level or in a directory named `.binder` or `binder`. In the following sections, we will assume these files to be located in `binder`.
+Specifically for the Methods Hub, the following files **must** be available among the binder configuration files:
 
-Among the binder configuration files, there **must** be a `binder/postBuild` file that facilitates Quarto installation. The `postBuild` can be downloaded from https://methodshub.gesis.org/snippet/postBuild/.
-
-### Language agnostic
-
-Create `binder/environment.yml` using `conda`.
-
-```bash
-conda env export -n environment-name > binder/environment.yml
-```
-
-The `binder/environment.yml` should look like [`binder-examples/language-agnostic/environment.yml`](binder-examples/language-agnostic/environment.yml).
-
-It is strongly recommended to pin the version of the dependencies.
+1. `binder/postBuild` file that facilitates Quarto installation. The `postBuild` can be downloaded from https://methodshub.gesis.org/snippet/postBuild/.
+2. configuration files that record the computational environment, e.g. dependencies. See the following sections on how to create these files for different programming languages.
 
 ### Python
 
@@ -49,7 +42,7 @@ Create `binder/requirements.txt` using `pip`.
 python3 -m pip freeze > binder/requirements.txt
 ```
 
-The `binder/requirements.txt` should look like [`binder-examples/language-agnostic/requirements.yml`](binder-examples/language-agnostic/requirements.yml).
+The `binder/requirements.txt` should look like [`binder-examples/python/requirements.txt`](binder-examples/python/requirements.txt).
 
 It is strongly recommended to pin the version of the dependencies.
 
@@ -57,19 +50,34 @@ It is strongly recommended to pin the version of the dependencies.
 
 `install.packages()` or similar commands for installing R packages (e.g. `pak::pkg_install()`, `devtools::install_github()`) should **not** be called from `.qmd` or `.rmd`!
 
-Instead, create `binder/runtime.txt` and `binder/install.R`.
+Instead, create `binder/runtime.txt` (which contains the current R version and a snapshot date) and `binder/install.R`.
 
 ```bash
-echo "r-$(R --version | head -n 1 | grep -oP '\d+\.\d+\.\d+')-$(printf '%(%Y-%m-%d)T\n' -1)" > binder/runtime.txt
+## Record the current R version and use the current date as the snapshot date
+Rscript -e "writeLines(paste0('r-', getRversion(), '-', format(Sys.time(), '%Y-%m-%d')), 'binder/runtimes.txt')" 
 ```
 
-And add `install.packages()` calls to `binder/install.R`.
+And add `install.packages()` calls to `binder/install.R`. The `binder/install.R` should look like [`binder-examples/r/install.R`](binder-examples/r/install.R).
 
-The `binder/install.R` should look like [`binder-examples/language-agnostic/install.R`](binder-examples/language-agnostic/install.R).
-
-There are no need to pin the version (e.g. with tools such as `renv`) because [P3M](https://posit.co/products/cloud/public-package-manager/) is used. It will install the latest version of R packages according to the snapshot date recorded in `runtime.txt`.
+There are no need to pin the version (e.g. with tools such as `renv`) [^renv] because [P3M](https://posit.co/products/cloud/public-package-manager/) is used. It will install the latest version of R packages according to the snapshot date recorded in `runtime.txt`.
 
 If there is a need to illustrate the installation process using `install.packages()` or similar commands for installing R packages, set the code block to `eval: false` as illustrated in [`template.qmd`](template.qmd).
+
+### Many languages (conda)
+
+If you use `conda` to configure your computational environment,  create `binder/environment.yml`.
+
+```bash
+## Export the current active environment
+conda env export > binder/environment.yml
+
+## Export a specific environment, e.g. environment-name
+conda env export -n environment-name > binder/environment.yml
+```
+
+The `binder/environment.yml` should look like [`binder-examples/conda/environment.yml`](binder-examples/conda/environment.yml).
+
+It is strongly recommended to pin the version of the dependencies.
 
 ## Structure of tutorial source file
 
@@ -159,6 +167,8 @@ plot(mtcars$mpg, mtcars$wt)
 ````
 
 [^1]: That environment will be used for rendering the tutorial and for the interactive execution.
+
+[^renv]: But if you know how to do that, you are allowed to do that.
 
 [Quarto]: https://quarto.org/
 [`template.qmd`]: template.qmd
