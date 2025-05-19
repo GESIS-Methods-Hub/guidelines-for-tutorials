@@ -75,19 +75,24 @@ If there is a need to illustrate the installation process using `install.package
 
 There are some suggested headings. See [`template.qmd`] and [`template.ipynb`] for the suggested headings.
 
-## Reproducibility
+## HTML Rendering
 
-All submitted tutorials will be converted to HTML by Methods Hub using [Quarto]. The HTML version is included in the tutorial's landing page on Methods Hub.
+All submitted tutorials will be converted (or rendered) to HTML by Methods Hub using [Quarto]. The HTML version is included in the tutorial's landing page on Methods Hub.
 
-## Use the template
+Before submitting the tutorial, please test the rendering offline and check the HTML file produced.
+
+### Rendering a Quarto document
 
 If you use [`template.qmd`], you can get both HTML (for preview) and `ipynb` by running:
 
 ```sh
+## assume you have not renamed the file
 quarto render template.qmd
 ```
 
-## Use the Jupyter notebook template
+Please then check the converted HTML file.
+
+### Rendering a Jupyter notebook
 
 Jupyter notebooks are rendered into HTML with [Quarto] using the Jupyter kernel. Comparing to native `.qmd` documents, the following features are not supported.
 
@@ -102,25 +107,27 @@ It can be rendered with quarto like so:
 quarto render notebook.ipynb --execute
 ```
 
-## Conversion
+Please then check the converted HTML file.
 
-Methods Hub uses `quarto` to do the conversion. You can try the same conversion yourself.
+<!-- ## Conversion -->
 
-`qmd` to `ipynb`
+<!-- Methods Hub uses `quarto` to do the conversion. You can try the same conversion yourself. -->
 
-```sh
-quarto convert input.qmd --output output.ipynb
-```
+<!-- `qmd` to `ipynb` -->
 
-`ipynb` to `qmd`
+<!-- ```sh -->
+<!-- quarto convert input.qmd --output output.ipynb -->
+<!-- ``` -->
 
-```sh
-quarto convert input.ipynb --output output.qmd
-```
+<!-- `ipynb` to `qmd` -->
 
-See [`conv.sh`](conv.sh) on how to convert [an existing `ipynb`-based tutorial](https://github.com/gesiscss/css_methods_python/tree/main/b_data_collection_methods) to quarto and back. See also the note about code execution below.
+<!-- ```sh -->
+<!-- quarto convert input.ipynb --output output.qmd -->
+<!-- ``` -->
 
-## Caution: Code execution by knitr and jupyter
+<!-- See [`conv.sh`](conv.sh) on how to convert [an existing `ipynb`-based tutorial](https://github.com/gesiscss/css_methods_python/tree/main/b_data_collection_methods) to quarto and back. See also the note about code execution below. -->
+
+#### Caution: Code execution by `knitr` and `jupyter`
 
 There is one subtle, but important, difference between the code execution between `knitr` (the default renderer for R code in `quarto`) and jupyter. For example, this R code block (see the provided file `code_exec.qmd`)
 
