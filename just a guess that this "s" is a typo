@@ -54,7 +54,7 @@ Instead, create `binder/runtime.txt` (which contains the current R version and a
 
 ```bash
 ## Record the current R version and use the current date as the snapshot date
-Rscript -e "writeLines(paste0('r-', getRversion(), '-', format(Sys.time(), '%Y-%m-%d')), 'binder/runtimes.txt')" 
+Rscript -e "writeLines(paste0('r-', getRversion(), '-', format(Sys.time(), '%Y-%m-%d')), 'binder/runtime.txt')" 
 ```
 
 And add `install.packages()` calls to `binder/install.R`. The `binder/install.R` should look like [`binder-examples/r/install.R`](binder-examples/r/install.R).
