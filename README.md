@@ -27,7 +27,7 @@ The Git repository with the tutorial **must** have the following files
 - [`LICENSE.*`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 - [`CITATION.cff`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files)
 
-Additionally, the Git repository **must** also have the [necessary files for setting up a binder environment](https://mybinder.readthedocs.io/en/latest/using/config_files.html)[^1]. These binder configuration files can be located at the root level or in a directory named `.binder` or `binder`. In the following sections, we will assume these files to be located in `binder`.
+Additionally, the Git repository **must** also have the [necessary files for setting up a binder environment](https://mybinder.readthedocs.io/en/latest/using/config_files.html)used for rendering the tutorial. These binder configuration files can be located at the root level or in a directory named `.binder` or `binder`. In the following sections, we will assume these files to be located in `binder`.
 
 Specifically for the Methods Hub, the following files **must** be available among the binder configuration files:
 
@@ -172,8 +172,6 @@ mean(mtcars$mpg)
 plot(mtcars$mpg, mtcars$wt)
 ```
 ````
-
-[^1]: That environment will be used for rendering the tutorial and for the interactive execution.
 
 [^renv]: But if you know how to do that, you are allowed to do that.
 
