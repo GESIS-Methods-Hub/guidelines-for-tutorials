@@ -48,7 +48,7 @@ It is strongly recommended to pin the version of the dependencies.
 
 ### R
 
-`install.packages()` or similar commands for installing R packages (e.g. `pak::pkg_install()`, `devtools::install_github()`) should **not** be called from `.qmd` or `.rmd`!
+`install.packages()` or similar commands for installing R packages (e.g. `pak::pkg_install()`, `devtools::install_github()`) should **not** be called from the tutorial source file (e.g. `qmd`, `rmd`, or `.ipynb`).
 
 Instead, create `binder/runtime.txt` (which contains the current R version and a snapshot date) and `binder/install.R`.
 
