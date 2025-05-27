@@ -6,9 +6,28 @@ A tutorial is an instructional resource that may be used as a part of a self-gui
 
 At [Methods Hub's Taxonomy](https://methodshub.gesis.org/about/how-to-submit/taxonomy) you find an overview of tasks for which Methods Hub welcomes tutorials.
 
-<!--
-The checklist will be here
---->
+## Tutorial publishing checklist
+
+### Openness criteria
+
+- [ ] The tutorial is developed in an open-source programming language (e.g., Python or R).
+- [ ] The tutorial is publicly accessible in a Git Repository.
+- [ ] The tutorial is [published under an open license](https://opensource.guide/legal/#which-open-source-license-is-appropriate-for-my-project).
+
+### Scoping criteria
+
+- [ ] The tutorial is relevant for the social sciences (shown through use cases, research question or citing relevant social science publications in the tutorial source file of the repository.
+- [ ] The tutorial belongs to a relevant task type of the first (most abstract) level of the [Tasks Taxonomy](https://methodshub.gesis.org/about/how-to-submit/taxonomy) (has to be selected in the submission form; if none of the current second level types fits the method, contact us at <methodshub@gesis.org> to extend the taxonomy).
+
+### Quality criteria
+
+#### Documentation quality criteria
+
+- [ ] The tutorial repository contains the configuration files for installing all requirements (e.g., `environment.yml`, `requirements.txt`, `install.R`).
+- [ ] The tutorial repository contains a `LICENSE` file (corresponding to an [open license](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository)) at the root level of the repository.
+- [ ] The tutorial repository contains a [`CITATION.cff`](https://citation-file-format.github.io/) file at the root level of the repository.
+- [ ] The tutorial repository contains a tutorial source file (can be  `README.md` or another file; has to be selected in the submission form) that follows the structure of the templates.
+- [ ] The tutorial repository has the [necessary files for setting up a binder environment](https://mybinder.readthedocs.io/en/latest/using/config_files.html) (See below).
 
 ## Accepted formats 
 
