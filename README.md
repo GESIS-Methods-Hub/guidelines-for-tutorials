@@ -27,7 +27,7 @@ The Git repository with the tutorial **must** have the following files
 - [`LICENSE.*`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 - [`CITATION.cff`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files)
 
-Additionally, the Git repository **must** also have the [necessary files for setting up a binder environment](https://mybinder.readthedocs.io/en/latest/using/config_files.html)[^1]. These binder configuration files can be located at the root level or in a directory named `.binder` or `binder`. In the following sections, we will assume these files to be located in `binder`.
+Additionally, the Git repository **must** also have the [necessary files for setting up a binder environment](https://mybinder.readthedocs.io/en/latest/using/config_files.html)used for rendering the tutorial. These binder configuration files can be located at the root level or in a directory named `.binder` or `binder`. In the following sections, we will assume these files to be located in `binder`.
 
 Specifically for the Methods Hub, the following files **must** be available among the binder configuration files:
 
@@ -59,7 +59,7 @@ Rscript -e "writeLines(paste0('r-', getRversion(), '-', format(Sys.time(), '%Y-%
 
 And add `install.packages()` calls to `binder/install.R`. The `binder/install.R` should look like [`binder-examples/r/install.R`](binder-examples/r/install.R).
 
-There are no need to pin the version (e.g. with tools such as `renv`) [^renv] because [P3M](https://posit.co/products/cloud/public-package-manager/) is used. It will install the latest version of R packages according to the snapshot date recorded in `runtime.txt`.
+Although allowed, there are no need to pin the version with tools such as `renv` because [P3M](https://posit.co/products/cloud/public-package-manager/) is used when creating a binder environment. It will install the latest version of R packages according to the snapshot date recorded in `runtime.txt`.
 
 If there is a need to illustrate the installation process using `install.packages()` or similar commands for installing R packages, set the code block to `eval: false` as illustrated in [`template.qmd`](template.qmd).
 
@@ -172,10 +172,6 @@ mean(mtcars$mpg)
 plot(mtcars$mpg, mtcars$wt)
 ```
 ````
-
-[^1]: That environment will be used for rendering the tutorial and for the interactive execution.
-
-[^renv]: But if you know how to do that, you are allowed to do that.
 
 [Quarto]: https://quarto.org/
 [`template.qmd`]: template.qmd
