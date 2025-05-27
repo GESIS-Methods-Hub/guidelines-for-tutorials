@@ -59,7 +59,7 @@ Rscript -e "writeLines(paste0('r-', getRversion(), '-', format(Sys.time(), '%Y-%
 
 And add `install.packages()` calls to `binder/install.R`. The `binder/install.R` should look like [`binder-examples/r/install.R`](binder-examples/r/install.R).
 
-There are no need to pin the version (e.g. with tools such as `renv`) [^renv] because [P3M](https://posit.co/products/cloud/public-package-manager/) is used. It will install the latest version of R packages according to the snapshot date recorded in `runtime.txt`.
+Although allowed, there are no need to pin the version with tools such as `renv` because [P3M](https://posit.co/products/cloud/public-package-manager/) is used when creating a binder environment. It will install the latest version of R packages according to the snapshot date recorded in `runtime.txt`.
 
 If there is a need to illustrate the installation process using `install.packages()` or similar commands for installing R packages, set the code block to `eval: false` as illustrated in [`template.qmd`](template.qmd).
 
@@ -172,8 +172,6 @@ mean(mtcars$mpg)
 plot(mtcars$mpg, mtcars$wt)
 ```
 ````
-
-[^renv]: But if you know how to do that, you are allowed to do that.
 
 [Quarto]: https://quarto.org/
 [`template.qmd`]: template.qmd
