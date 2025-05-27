@@ -65,12 +65,16 @@ If there is a need to illustrate the installation process using `install.package
 
 ### Many languages (conda)
 
-If you use `conda` to configure your computational environment,  create `binder/environment.yml`.
+If you use `conda` to configure your computational environment, create `binder/environment.yml` with
 
 ```bash
 ## Export the current active environment
 conda env export > binder/environment.yml
+```
 
+or
+
+```bash
 ## Export a specific environment, e.g. environment-name
 conda env export -n environment-name > binder/environment.yml
 ```
